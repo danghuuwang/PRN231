@@ -1,6 +1,9 @@
-﻿namespace DataAccess.Repository.IRepository;
+﻿using BusinessObject;
 
-public class IMemberRepository
+namespace DataAccess.Repository.IRepository;
+
+public interface IMemberRepository
 {
-    
+    Member? Login(string email, string password);
+    List<Member> GetMembers();
 }

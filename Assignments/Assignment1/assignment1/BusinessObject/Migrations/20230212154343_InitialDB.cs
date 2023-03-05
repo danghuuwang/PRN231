@@ -31,8 +31,8 @@ namespace BusinessObject.Migrations
                     MEMBERID = table.Column<int>(name: "MEMBER_ID", type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EMAIL = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    COMPANYNAME = table.Column<string>(name: "COMPANY_NAME", type: "nvarchar(max)", nullable: false),
-                    CITY = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    COMPANYNAME = table.Column<string>(name: "COMPANY_NAME", type: "nvarchar(max)", nullable: true),
+                    CITY = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     COUNTRY = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PASSWORD = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

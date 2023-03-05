@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BusinessObject.Member>
+
+@{
+    ViewBag.Title = "List members";
+    Layout = "_Layout";
+}
+
+<h1 class="display-1" style="margin-bottom: 30px">List members</h1>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.MemberId)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var member in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => member.MemberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => member.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => member.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => member.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => member.Country)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -12,10 +12,10 @@ public class Member
     public string Email { get; set; }
     
     [Column("COMPANY_NAME")]
-    public string CompanyName { get; set; }
+    public string? CompanyName { get; set; }
     
     [Column("CITY")]
-    public string City { get; set; }
+    public string? City { get; set; }
     
     [Column("COUNTRY")]
     public string Country { get; set; }
